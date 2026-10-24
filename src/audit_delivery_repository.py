@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import json
 import re
@@ -88,8 +89,12 @@ def audit(root, remote, output):
         fetched = {}
         for name in ("outputs/submission_v5.csv", "reports/academic_report_v5_final.pdf",
                      "reports/evidence/kaggle_v5_scores.png", "reports/evidence/kaggle_all_scores.png"):
-            data = run(root, "gh", "api", "-H", "Accept: application/vnd.github.raw+json",
-                       f"repos/{metadata['nameWithOwner']}/contents/{name}?ref={commit}")
+            # Use base64 Git blobs: some gh versions apply text transforms to raw
+            # binary contents responses, preventing reliable PDF/PNG downloads.
+            blob = json.loads(run(root, "gh", "api", f"repos/{metadata['nameWithOwner']}/git/blobs/{remote_files[name]['sha']}"))
+            if blob.get("encoding") != "base64":
+                raise AssertionError("Unexpected GitHub blob encoding.")
+            data = base64.b64decode(blob["content"], validate=False)
             digest = hashlib.sha256(data).hexdigest()
             if digest != files[name]["sha256"]:
                 raise AssertionError(f"Downloaded GitHub content mismatch: {name}")
