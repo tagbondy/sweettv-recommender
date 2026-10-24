@@ -1,0 +1,55 @@
+{
+  "provenance": "User-verified actual Kaggle results; both original screenshots visually inspected during finalization.",
+  "history": [
+    {
+      "version": "V1",
+      "public_map_at_5": 0.31901,
+      "private_map_at_5": 0.31614
+    },
+    {
+      "version": "V2",
+      "public_map_at_5": 0.41082,
+      "private_map_at_5": 0.39407
+    },
+    {
+      "version": "V3",
+      "public_map_at_5": 0.43568,
+      "private_map_at_5": 0.43224
+    },
+    {
+      "version": "V4",
+      "public_map_at_5": 0.44087,
+      "private_map_at_5": 0.43552
+    },
+    {
+      "version": "V5",
+      "public_map_at_5": 0.44671,
+      "private_map_at_5": 0.43927
+    }
+  ],
+  "selected_version": "V5",
+  "selected_csv": "outputs/submission_v5.csv",
+  "submission_sha256": "18b79a44e38d3a19b0edd75587535161c32b29bcadd19d28ad106a4c7cc651c0",
+  "public_target": 0.5,
+  "public_target_achieved": false,
+  "improvement_over_v4": {
+    "public_absolute": 0.00584,
+    "private_absolute": 0.00375
+  },
+  "screenshots": {
+    "reports/evidence/kaggle_v5_scores.png": {
+      "size_bytes": 284789,
+      "mtime_ns": 1792840966752901805,
+      "sha256": "b40f2eb2a7ac6dc2ef33ccb910304dc5a7b4734f545e9fd7b3c00a3408ec9240",
+      "width_pixels": 1564,
+      "height_pixels": 1729
+    },
+    "reports/evidence/kaggle_all_scores.png": {
+      "size_bytes": 310211,
+      "mtime_ns": 1792841103831460016,
+      "sha256": "75e4b74d3d8950c45cc82d8c4761191491eeb0d70b5470eeda4afaa6dac9607c",
+      "width_pixels": 1923,
+      "height_pixels": 1487
+    }
+  }
+}

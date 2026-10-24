@@ -1,0 +1,762 @@
+{
+  "generated_at_utc": "2026-10-24T11:49:39.372914+00:00",
+  "pending_requirements": [],
+  "selected_users": [
+    "13571199046623737884",
+    "4478271560731083975"
+  ],
+  "examples": [
+    {
+      "user_id": "13571199046623737884",
+      "method": "Popularity",
+      "rank": 1,
+      "tv_show_id": 2400480,
+      "title": "ТСН.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Popularity",
+      "rank": 2,
+      "tv_show_id": 240081,
+      "title": "Факты.",
+      "category": "Инфо",
+      "strict_validation_hit": true,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Popularity",
+      "rank": 3,
+      "tv_show_id": 2400508,
+      "title": "Сегодня.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Popularity",
+      "rank": 4,
+      "tv_show_id": 6500479,
+      "title": "'Мир наизнанку'.",
+      "category": "Познавательное",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Popularity",
+      "rank": 5,
+      "tv_show_id": 2400467,
+      "title": "'Викна-Новости'.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Content-based filtering",
+      "rank": 1,
+      "tv_show_id": 90079323,
+      "title": "Х/ф 'Иллюзия обмана 2'.",
+      "category": "Фильмы",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Content-based filtering",
+      "rank": 2,
+      "tv_show_id": 90079897,
+      "title": "Х/ф 'Отпетые напарники'.",
+      "category": "Фильмы",
+      "strict_validation_hit": false,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Content-based filtering",
+      "rank": 3,
+      "tv_show_id": 90076295,
+      "title": "Х/ф 'Призрачный патруль'.",
+      "category": "Фильмы",
+      "strict_validation_hit": false,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Content-based filtering",
+      "rank": 4,
+      "tv_show_id": 90079463,
+      "title": "Х/ф 'Братья из Гримсби'.",
+      "category": "Фильмы",
+      "strict_validation_hit": false,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Content-based filtering",
+      "rank": 5,
+      "tv_show_id": 90072921,
+      "title": "Х/ф 'Большой солдат'",
+      "category": "Фильмы",
+      "strict_validation_hit": false,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Association rules",
+      "rank": 1,
+      "tv_show_id": 2400480,
+      "title": "ТСН.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Association rules",
+      "rank": 2,
+      "tv_show_id": 2400508,
+      "title": "Сегодня.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Association rules",
+      "rank": 3,
+      "tv_show_id": 240081,
+      "title": "Факты.",
+      "category": "Инфо",
+      "strict_validation_hit": true,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Association rules",
+      "rank": 4,
+      "tv_show_id": 12001682,
+      "title": "М/с 'Губка Боб Квадратные Штаны'.",
+      "category": "Детям",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "Association rules",
+      "rank": 5,
+      "tv_show_id": 6500479,
+      "title": "'Мир наизнанку'.",
+      "category": "Познавательное",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V2 personalized repeat",
+      "rank": 1,
+      "tv_show_id": 12001682,
+      "title": "М/с 'Губка Боб Квадратные Штаны'.",
+      "category": "Детям",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V2 personalized repeat",
+      "rank": 2,
+      "tv_show_id": 240081,
+      "title": "Факты.",
+      "category": "Инфо",
+      "strict_validation_hit": true,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V2 personalized repeat",
+      "rank": 3,
+      "tv_show_id": 2400480,
+      "title": "ТСН.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V2 personalized repeat",
+      "rank": 4,
+      "tv_show_id": 2400508,
+      "title": "Сегодня.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V2 personalized repeat",
+      "rank": 5,
+      "tv_show_id": 20088,
+      "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V3 logistic reranking",
+      "rank": 1,
+      "tv_show_id": 240081,
+      "title": "Факты.",
+      "category": "Инфо",
+      "strict_validation_hit": true,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V3 logistic reranking",
+      "rank": 2,
+      "tv_show_id": 2400480,
+      "title": "ТСН.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V3 logistic reranking",
+      "rank": 3,
+      "tv_show_id": 12001682,
+      "title": "М/с 'Губка Боб Квадратные Штаны'.",
+      "category": "Детям",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V3 logistic reranking",
+      "rank": 4,
+      "tv_show_id": 2400508,
+      "title": "Сегодня.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V3 logistic reranking",
+      "rank": 5,
+      "tv_show_id": 200337,
+      "title": "Утро с Интером.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V4 ensemble",
+      "rank": 1,
+      "tv_show_id": 240081,
+      "title": "Факты.",
+      "category": "Инфо",
+      "strict_validation_hit": true,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V4 ensemble",
+      "rank": 2,
+      "tv_show_id": 2400480,
+      "title": "ТСН.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V4 ensemble",
+      "rank": 3,
+      "tv_show_id": 200337,
+      "title": "Утро с Интером.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V4 ensemble",
+      "rank": 4,
+      "tv_show_id": 2400508,
+      "title": "Сегодня.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V4 ensemble",
+      "rank": 5,
+      "tv_show_id": 12001682,
+      "title": "М/с 'Губка Боб Квадратные Штаны'.",
+      "category": "Детям",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V5 selected strategy",
+      "rank": 1,
+      "tv_show_id": 2400480,
+      "title": "ТСН.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V5 selected strategy",
+      "rank": 2,
+      "tv_show_id": 240081,
+      "title": "Факты.",
+      "category": "Инфо",
+      "strict_validation_hit": true,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V5 selected strategy",
+      "rank": 3,
+      "tv_show_id": 2400508,
+      "title": "Сегодня.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V5 selected strategy",
+      "rank": 4,
+      "tv_show_id": 12001682,
+      "title": "М/с 'Губка Боб Квадратные Штаны'.",
+      "category": "Детям",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "13571199046623737884",
+      "method": "V5 selected strategy",
+      "rank": 5,
+      "tv_show_id": 200337,
+      "title": "Утро с Интером.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Popularity",
+      "rank": 1,
+      "tv_show_id": 2400480,
+      "title": "ТСН.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Popularity",
+      "rank": 2,
+      "tv_show_id": 240081,
+      "title": "Факты.",
+      "category": "Инфо",
+      "strict_validation_hit": true,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Popularity",
+      "rank": 3,
+      "tv_show_id": 2400508,
+      "title": "Сегодня.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Popularity",
+      "rank": 4,
+      "tv_show_id": 6500479,
+      "title": "'Мир наизнанку'.",
+      "category": "Познавательное",
+      "strict_validation_hit": false,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Popularity",
+      "rank": 5,
+      "tv_show_id": 2400467,
+      "title": "'Викна-Новости'.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Content-based filtering",
+      "rank": 1,
+      "tv_show_id": 20088,
+      "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Content-based filtering",
+      "rank": 2,
+      "tv_show_id": 200337,
+      "title": "Утро с Интером.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Content-based filtering",
+      "rank": 3,
+      "tv_show_id": 200477,
+      "title": "'Завтрак. Выходной'.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Content-based filtering",
+      "rank": 4,
+      "tv_show_id": 2400508,
+      "title": "Сегодня.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Content-based filtering",
+      "rank": 5,
+      "tv_show_id": 5900256,
+      "title": "Утро с Украиной.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Association rules",
+      "rank": 1,
+      "tv_show_id": 2400480,
+      "title": "ТСН.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Association rules",
+      "rank": 2,
+      "tv_show_id": 2400508,
+      "title": "Сегодня.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Association rules",
+      "rank": 3,
+      "tv_show_id": 240081,
+      "title": "Факты.",
+      "category": "Инфо",
+      "strict_validation_hit": true,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Association rules",
+      "rank": 4,
+      "tv_show_id": 2400467,
+      "title": "'Викна-Новости'.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "Association rules",
+      "rank": 5,
+      "tv_show_id": 6500479,
+      "title": "'Мир наизнанку'.",
+      "category": "Познавательное",
+      "strict_validation_hit": false,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V2 personalized repeat",
+      "rank": 1,
+      "tv_show_id": 200337,
+      "title": "Утро с Интером.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V2 personalized repeat",
+      "rank": 2,
+      "tv_show_id": 20088,
+      "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V2 personalized repeat",
+      "rank": 3,
+      "tv_show_id": 2400480,
+      "title": "ТСН.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V2 personalized repeat",
+      "rank": 4,
+      "tv_show_id": 700369,
+      "title": "'Ліга сміху'.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V2 personalized repeat",
+      "rank": 5,
+      "tv_show_id": 500281,
+      "title": "Ток-шоу 'Говорит Украина'.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V3 logistic reranking",
+      "rank": 1,
+      "tv_show_id": 2400480,
+      "title": "ТСН.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V3 logistic reranking",
+      "rank": 2,
+      "tv_show_id": 20088,
+      "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V3 logistic reranking",
+      "rank": 3,
+      "tv_show_id": 2400508,
+      "title": "Сегодня.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V3 logistic reranking",
+      "rank": 4,
+      "tv_show_id": 200337,
+      "title": "Утро с Интером.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V3 logistic reranking",
+      "rank": 5,
+      "tv_show_id": 240081,
+      "title": "Факты.",
+      "category": "Инфо",
+      "strict_validation_hit": true,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V4 ensemble",
+      "rank": 1,
+      "tv_show_id": 2400480,
+      "title": "ТСН.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V4 ensemble",
+      "rank": 2,
+      "tv_show_id": 2400508,
+      "title": "Сегодня.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V4 ensemble",
+      "rank": 3,
+      "tv_show_id": 20088,
+      "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V4 ensemble",
+      "rank": 4,
+      "tv_show_id": 200337,
+      "title": "Утро с Интером.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V4 ensemble",
+      "rank": 5,
+      "tv_show_id": 240081,
+      "title": "Факты.",
+      "category": "Инфо",
+      "strict_validation_hit": true,
+      "observed_training_ge30": false
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V5 selected strategy",
+      "rank": 1,
+      "tv_show_id": 2400480,
+      "title": "ТСН.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V5 selected strategy",
+      "rank": 2,
+      "tv_show_id": 2400508,
+      "title": "Сегодня.",
+      "category": "Инфо",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V5 selected strategy",
+      "rank": 3,
+      "tv_show_id": 20088,
+      "title": "'Завтрак с 1+1'. Информационно-развлекательная программа.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V5 selected strategy",
+      "rank": 4,
+      "tv_show_id": 200337,
+      "title": "Утро с Интером.",
+      "category": "Развлечения",
+      "strict_validation_hit": false,
+      "observed_training_ge30": true
+    },
+    {
+      "user_id": "4478271560731083975",
+      "method": "V5 selected strategy",
+      "rank": 5,
+      "tv_show_id": 240081,
+      "title": "Факты.",
+      "category": "Инфо",
+      "strict_validation_hit": true,
+      "observed_training_ge30": false
+    }
+  ],
+  "repository_url": "https://github.com/tagbondy/sweettv-recommender",
+  "designated_submission": "outputs/submission_v5.csv",
+  "submission_sha256": "18b79a44e38d3a19b0edd75587535161c32b29bcadd19d28ad106a4c7cc651c0",
+  "kaggle_results": [
+    {
+      "version": "V1",
+      "public_map_at_5": 0.31901,
+      "private_map_at_5": 0.31614
+    },
+    {
+      "version": "V2",
+      "public_map_at_5": 0.41082,
+      "private_map_at_5": 0.39407
+    },
+    {
+      "version": "V3",
+      "public_map_at_5": 0.43568,
+      "private_map_at_5": 0.43224
+    },
+    {
+      "version": "V4",
+      "public_map_at_5": 0.44087,
+      "private_map_at_5": 0.43552
+    },
+    {
+      "version": "V5",
+      "public_map_at_5": 0.44671,
+      "private_map_at_5": 0.43927
+    }
+  ],
+  "screenshots": {
+    "reports/evidence/kaggle_v5_scores.png": {
+      "size_bytes": 284789,
+      "mtime_ns": 1792840966752901805,
+      "sha256": "b40f2eb2a7ac6dc2ef33ccb910304dc5a7b4734f545e9fd7b3c00a3408ec9240"
+    },
+    "reports/evidence/kaggle_all_scores.png": {
+      "size_bytes": 310211,
+      "mtime_ns": 1792841103831460016,
+      "sha256": "75e4b74d3d8950c45cc82d8c4761191491eeb0d70b5470eeda4afaa6dac9607c"
+    }
+  },
+  "source_report": {
+    "size_bytes": 6768405,
+    "mtime_ns": 1792840031399029024,
+    "sha256": "cd559c58318015389870eab55cb64756c1b8bdf4cce159d38e4663a7ef03650f"
+  },
+  "original_ai_export": {
+    "size_bytes": 9662496,
+    "mtime_ns": 1792827645473111037,
+    "sha256": "8326f5e4f21aae6300cc0ef2f1c096ffb2bf4fb74be41305ee93e8db4a865f15"
+  }
+}

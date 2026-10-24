@@ -1,0 +1,1994 @@
+{
+  "repository_url": "https://github.com/tagbondy/sweettv-recommender",
+  "visibility": "PRIVATE",
+  "selected_submission": "outputs/submission_v5.csv",
+  "submission_sha256": "18b79a44e38d3a19b0edd75587535161c32b29bcadd19d28ad106a4c7cc651c0",
+  "verified_kaggle_history": [
+    {
+      "version": "V1",
+      "public_map_at_5": 0.31901,
+      "private_map_at_5": 0.31614
+    },
+    {
+      "version": "V2",
+      "public_map_at_5": 0.41082,
+      "private_map_at_5": 0.39407
+    },
+    {
+      "version": "V3",
+      "public_map_at_5": 0.43568,
+      "private_map_at_5": 0.43224
+    },
+    {
+      "version": "V4",
+      "public_map_at_5": 0.44087,
+      "private_map_at_5": 0.43552
+    },
+    {
+      "version": "V5",
+      "public_map_at_5": 0.44671,
+      "private_map_at_5": 0.43927
+    }
+  ],
+  "public_target_achieved": false,
+  "selected_strategy": "four_way_rrf",
+  "experiments": [
+    {
+      "name": "Popularity",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.45928350970017634
+    },
+    {
+      "name": "Content_based",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.009496031746031745
+    },
+    {
+      "name": "Association_rules",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.4869975749559083
+    },
+    {
+      "name": "V2_repeat",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5329305555555555
+    },
+    {
+      "name": "V3_logistic",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5803765432098766
+    },
+    {
+      "name": "V4_ensemble_control",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5842233245149911
+    },
+    {
+      "name": "V4_binary_C_control",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5829750881834215
+    },
+    {
+      "name": "A_base_replay",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5829750881834215,
+      "specification": {
+        "name": "A_base_replay",
+        "features": "base",
+        "fit_origins": [
+          "early"
+        ],
+        "target": "primary",
+        "templates_only": true,
+        "objective": "binary",
+        "rounds": 269,
+        "model_path": "reports/behavioral_v5_A_base_replay_model.txt",
+        "score_path": "data/processed/behavioral_v5_A_base_replay_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_A_base_replay.csv",
+        "result_path": "reports/behavioral_v5_A_base_replay_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "early",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 134359,
+          "positive_labels": 10790,
+          "extra_users": 0
+        }
+      ],
+      "rows": 134359,
+      "features": 61,
+      "rounds": 269,
+      "runtime_seconds": 7.987817107998126,
+      "peak_process_rss_mib": 383.4375,
+      "native_params": {
+        "objective": "binary",
+        "num_leaves": 31,
+        "learning_rate": 0.03,
+        "min_data_in_leaf": 50,
+        "lambda_l2": 10.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "binary_logloss"
+      },
+      "top_feature_gains": [
+        {
+          "feature": "repeat_association_interaction",
+          "gain": 261666.67111587524,
+          "split": 157
+        },
+        {
+          "feature": "expected_future_qualified_airings",
+          "gain": 58426.77745389938,
+          "split": 239
+        },
+        {
+          "feature": "frequency_ge30",
+          "gain": 28436.420429706573,
+          "split": 27
+        },
+        {
+          "feature": "mean_broadcast_minutes",
+          "gain": 21819.112150907516,
+          "split": 507
+        },
+        {
+          "feature": "future_airings",
+          "gain": 19458.76699447632,
+          "split": 218
+        },
+        {
+          "feature": "airing_day_coverage",
+          "gain": 17015.303165912628,
+          "split": 105
+        },
+        {
+          "feature": "association_best_confidence",
+          "gain": 13627.995384216309,
+          "split": 275
+        },
+        {
+          "feature": "user_qualified_minutes",
+          "gain": 11503.885392665863,
+          "split": 639
+        },
+        {
+          "feature": "user_distinct_programmes",
+          "gain": 6261.366922736168,
+          "split": 534
+        },
+        {
+          "feature": "last_airing_day_since_2020",
+          "gain": 6105.451897144318,
+          "split": 256
+        },
+        {
+          "feature": "association_sum_confidence",
+          "gain": 5412.003033876419,
+          "split": 314
+        },
+        {
+          "feature": "days_since_ge30",
+          "gain": 5294.277125835419,
+          "split": 209
+        }
+      ]
+    },
+    {
+      "name": "B_channel",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5915934744268078,
+      "specification": {
+        "name": "B_channel",
+        "features": "channel",
+        "fit_origins": [
+          "early"
+        ],
+        "target": "primary",
+        "templates_only": true,
+        "objective": "binary",
+        "rounds": 269,
+        "model_path": "reports/behavioral_v5_B_channel_model.txt",
+        "score_path": "data/processed/behavioral_v5_B_channel_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_B_channel.csv",
+        "result_path": "reports/behavioral_v5_B_channel_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "early",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 134359,
+          "positive_labels": 10790,
+          "extra_users": 0
+        }
+      ],
+      "rows": 134359,
+      "features": 79,
+      "rounds": 269,
+      "runtime_seconds": 11.124014203996921,
+      "peak_process_rss_mib": 424.015625,
+      "native_params": {
+        "objective": "binary",
+        "num_leaves": 31,
+        "learning_rate": 0.03,
+        "min_data_in_leaf": 50,
+        "lambda_l2": 10.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "binary_logloss"
+      },
+      "top_feature_gains": [
+        {
+          "feature": "repeat_association_interaction",
+          "gain": 200792.14052677155,
+          "split": 90
+        },
+        {
+          "feature": "channel_decayed_weighted_airings",
+          "gain": 102692.5319519043,
+          "split": 204
+        },
+        {
+          "feature": "expected_future_qualified_airings",
+          "gain": 42395.1755669117,
+          "split": 165
+        },
+        {
+          "feature": "channel_weighted_airings",
+          "gain": 40746.11498379707,
+          "split": 278
+        },
+        {
+          "feature": "frequency_ge30",
+          "gain": 28183.961800575256,
+          "split": 24
+        },
+        {
+          "feature": "mean_broadcast_minutes",
+          "gain": 21431.370502710342,
+          "split": 484
+        },
+        {
+          "feature": "user_qualified_minutes",
+          "gain": 10258.393767356873,
+          "split": 568
+        },
+        {
+          "feature": "recency_weight_half14",
+          "gain": 9513.527128219604,
+          "split": 44
+        },
+        {
+          "feature": "channel_days_since_last_min",
+          "gain": 6263.270974636078,
+          "split": 328
+        },
+        {
+          "feature": "days_since_gt80",
+          "gain": 5816.580792188644,
+          "split": 61
+        },
+        {
+          "feature": "association_best_confidence",
+          "gain": 5172.799664020538,
+          "split": 200
+        },
+        {
+          "feature": "channel_recent_weighted_airings",
+          "gain": 4864.841599702835,
+          "split": 140
+        }
+      ]
+    },
+    {
+      "name": "C_time",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5913500881834215,
+      "specification": {
+        "name": "C_time",
+        "features": "time",
+        "fit_origins": [
+          "early"
+        ],
+        "target": "primary",
+        "templates_only": true,
+        "objective": "binary",
+        "rounds": 269,
+        "model_path": "reports/behavioral_v5_C_time_model.txt",
+        "score_path": "data/processed/behavioral_v5_C_time_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_C_time.csv",
+        "result_path": "reports/behavioral_v5_C_time_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "early",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 134359,
+          "positive_labels": 10790,
+          "extra_users": 0
+        }
+      ],
+      "rows": 134359,
+      "features": 84,
+      "rounds": 269,
+      "runtime_seconds": 10.549791552999523,
+      "peak_process_rss_mib": 427.01171875,
+      "native_params": {
+        "objective": "binary",
+        "num_leaves": 31,
+        "learning_rate": 0.03,
+        "min_data_in_leaf": 50,
+        "lambda_l2": 10.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "binary_logloss"
+      },
+      "top_feature_gains": [
+        {
+          "feature": "time_opportunity_weight",
+          "gain": 200106.77031874657,
+          "split": 495
+        },
+        {
+          "feature": "repeat_association_interaction",
+          "gain": 146604.0084013939,
+          "split": 89
+        },
+        {
+          "feature": "expected_future_qualified_airings",
+          "gain": 42863.648114442825,
+          "split": 152
+        },
+        {
+          "feature": "frequency_ge30",
+          "gain": 28190.98786497116,
+          "split": 8
+        },
+        {
+          "feature": "mean_broadcast_minutes",
+          "gain": 22217.366434812546,
+          "split": 485
+        },
+        {
+          "feature": "recency_weight_half14",
+          "gain": 13436.913711071014,
+          "split": 48
+        },
+        {
+          "feature": "user_recent_hour_shift",
+          "gain": 10512.789909124374,
+          "split": 564
+        },
+        {
+          "feature": "user_qualified_minutes",
+          "gain": 6236.074565172195,
+          "split": 303
+        },
+        {
+          "feature": "user_long_session_fraction",
+          "gain": 5835.53519153595,
+          "split": 277
+        },
+        {
+          "feature": "days_since_ge30",
+          "gain": 5411.1987771987915,
+          "split": 146
+        },
+        {
+          "feature": "user_weekend_share",
+          "gain": 4358.293409347534,
+          "split": 346
+        },
+        {
+          "feature": "days_since_gt80",
+          "gain": 4037.8492164611816,
+          "split": 67
+        }
+      ]
+    },
+    {
+      "name": "D_both",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5927374338624338,
+      "specification": {
+        "name": "D_both",
+        "features": "both",
+        "fit_origins": [
+          "early"
+        ],
+        "target": "primary",
+        "templates_only": true,
+        "objective": "binary",
+        "rounds": 269,
+        "model_path": "reports/behavioral_v5_D_both_model.txt",
+        "score_path": "data/processed/behavioral_v5_D_both_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_D_both.csv",
+        "result_path": "reports/behavioral_v5_D_both_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "early",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 134359,
+          "positive_labels": 10790,
+          "extra_users": 0
+        }
+      ],
+      "rows": 134359,
+      "features": 102,
+      "rounds": 269,
+      "runtime_seconds": 13.023330378004175,
+      "peak_process_rss_mib": 436.0546875,
+      "native_params": {
+        "objective": "binary",
+        "num_leaves": 31,
+        "learning_rate": 0.03,
+        "min_data_in_leaf": 50,
+        "lambda_l2": 10.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "binary_logloss"
+      },
+      "top_feature_gains": [
+        {
+          "feature": "time_opportunity_weight",
+          "gain": 177927.81031274796,
+          "split": 281
+        },
+        {
+          "feature": "repeat_association_interaction",
+          "gain": 146320.63239860535,
+          "split": 71
+        },
+        {
+          "feature": "expected_future_qualified_airings",
+          "gain": 42614.194080114365,
+          "split": 128
+        },
+        {
+          "feature": "frequency_ge30",
+          "gain": 28298.65982580185,
+          "split": 9
+        },
+        {
+          "feature": "mean_broadcast_minutes",
+          "gain": 22233.253086566925,
+          "split": 439
+        },
+        {
+          "feature": "channel_decayed_weighted_airings",
+          "gain": 16602.099997997284,
+          "split": 106
+        },
+        {
+          "feature": "recency_weight_half14",
+          "gain": 14401.735746383667,
+          "split": 60
+        },
+        {
+          "feature": "user_recent_hour_shift",
+          "gain": 7303.380279541016,
+          "split": 408
+        },
+        {
+          "feature": "user_long_session_fraction",
+          "gain": 5590.955485582352,
+          "split": 242
+        },
+        {
+          "feature": "channel_days_since_last_min",
+          "gain": 5502.672868967056,
+          "split": 237
+        },
+        {
+          "feature": "user_qualified_minutes",
+          "gain": 5129.296872377396,
+          "split": 241
+        },
+        {
+          "feature": "days_since_gt80",
+          "gain": 4558.324704170227,
+          "split": 70
+        }
+      ]
+    },
+    {
+      "name": "E_add_origin",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5810789241622575,
+      "specification": {
+        "name": "E_add_origin",
+        "features": "base",
+        "fit_origins": [
+          "roll13",
+          "early"
+        ],
+        "target": "primary",
+        "templates_only": true,
+        "objective": "binary",
+        "rounds": 269,
+        "model_path": "reports/behavioral_v5_E_add_origin_model.txt",
+        "score_path": "data/processed/behavioral_v5_E_add_origin_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_E_add_origin.csv",
+        "result_path": "reports/behavioral_v5_E_add_origin_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "roll13",
+          "history_end": "2020-03-30 00:00:00",
+          "label_end": "2020-04-13 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 127417,
+          "positive_labels": 6528,
+          "extra_users": 0
+        },
+        {
+          "origin": "early",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 134359,
+          "positive_labels": 10790,
+          "extra_users": 0
+        }
+      ],
+      "rows": 261776,
+      "features": 61,
+      "rounds": 269,
+      "runtime_seconds": 14.146777517002192,
+      "peak_process_rss_mib": 520.29296875,
+      "native_params": {
+        "objective": "binary",
+        "num_leaves": 31,
+        "learning_rate": 0.03,
+        "min_data_in_leaf": 50,
+        "lambda_l2": 10.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "binary_logloss"
+      },
+      "top_feature_gains": [
+        {
+          "feature": "repeat_association_interaction",
+          "gain": 535435.7672016621,
+          "split": 149
+        },
+        {
+          "feature": "expected_future_qualified_airings",
+          "gain": 79336.40968561172,
+          "split": 228
+        },
+        {
+          "feature": "mean_broadcast_minutes",
+          "gain": 51428.63841891289,
+          "split": 652
+        },
+        {
+          "feature": "future_airings",
+          "gain": 35160.22764182091,
+          "split": 312
+        },
+        {
+          "feature": "association_best_confidence",
+          "gain": 32272.29305934906,
+          "split": 357
+        },
+        {
+          "feature": "user_qualified_minutes",
+          "gain": 14853.829255342484,
+          "split": 544
+        },
+        {
+          "feature": "recency_weight_half14",
+          "gain": 12635.1620824337,
+          "split": 56
+        },
+        {
+          "feature": "association_sum_confidence",
+          "gain": 8861.543474435806,
+          "split": 244
+        },
+        {
+          "feature": "days_since_ge30",
+          "gain": 8371.053234577179,
+          "split": 210
+        },
+        {
+          "feature": "recency_weight_half28",
+          "gain": 7734.117609024048,
+          "split": 33
+        },
+        {
+          "feature": "user_overlap_minutes",
+          "gain": 6752.277092933655,
+          "split": 282
+        },
+        {
+          "feature": "user_qualified_airings_ge30",
+          "gain": 6007.775948524475,
+          "split": 289
+        }
+      ]
+    },
+    {
+      "name": "E_disjoint_origins",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5768300264550265,
+      "specification": {
+        "name": "E_disjoint_origins",
+        "features": "base",
+        "fit_origins": [
+          "roll13",
+          "roll15",
+          "roll17"
+        ],
+        "target": "primary",
+        "templates_only": true,
+        "objective": "binary",
+        "rounds": 269,
+        "model_path": "reports/behavioral_v5_E_disjoint_origins_model.txt",
+        "score_path": "data/processed/behavioral_v5_E_disjoint_origins_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_E_disjoint_origins.csv",
+        "result_path": "reports/behavioral_v5_E_disjoint_origins_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "roll13",
+          "history_end": "2020-03-30 00:00:00",
+          "label_end": "2020-04-13 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 127417,
+          "positive_labels": 6528,
+          "extra_users": 0
+        },
+        {
+          "origin": "roll15",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-04-27 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 131028,
+          "positive_labels": 6032,
+          "extra_users": 0
+        },
+        {
+          "origin": "roll17",
+          "history_end": "2020-04-27 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 137375,
+          "positive_labels": 8113,
+          "extra_users": 0
+        }
+      ],
+      "rows": 395820,
+      "features": 61,
+      "rounds": 269,
+      "runtime_seconds": 21.419591826001124,
+      "peak_process_rss_mib": 702.03515625,
+      "native_params": {
+        "objective": "binary",
+        "num_leaves": 31,
+        "learning_rate": 0.03,
+        "min_data_in_leaf": 50,
+        "lambda_l2": 10.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "binary_logloss"
+      },
+      "top_feature_gains": [
+        {
+          "feature": "repeat_association_interaction",
+          "gain": 545208.1799349785,
+          "split": 119
+        },
+        {
+          "feature": "recency_weight_half28",
+          "gain": 197118.69474220276,
+          "split": 54
+        },
+        {
+          "feature": "expected_future_qualified_airings",
+          "gain": 82192.35464286804,
+          "split": 233
+        },
+        {
+          "feature": "mean_broadcast_minutes",
+          "gain": 59990.54201793671,
+          "split": 777
+        },
+        {
+          "feature": "association_best_confidence",
+          "gain": 32958.4110558033,
+          "split": 348
+        },
+        {
+          "feature": "future_airings",
+          "gain": 29547.43439102173,
+          "split": 305
+        },
+        {
+          "feature": "recency_weight_half14",
+          "gain": 22909.656715869904,
+          "split": 92
+        },
+        {
+          "feature": "user_qualified_minutes",
+          "gain": 13012.406136989594,
+          "split": 545
+        },
+        {
+          "feature": "days_since_ge30",
+          "gain": 12264.105906009674,
+          "split": 201
+        },
+        {
+          "feature": "association_sum_confidence",
+          "gain": 11858.385318279266,
+          "split": 279
+        },
+        {
+          "feature": "frequency_gt80_per_week",
+          "gain": 8862.087673187256,
+          "split": 83
+        },
+        {
+          "feature": "user_qualified_airings_ge30",
+          "gain": 7935.988489151001,
+          "split": 365
+        }
+      ]
+    },
+    {
+      "name": "E_extra_users",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5795800264550265,
+      "specification": {
+        "name": "E_extra_users",
+        "features": "base",
+        "fit_origins": [
+          "roll13",
+          "roll15",
+          "roll17"
+        ],
+        "target": "primary",
+        "templates_only": false,
+        "objective": "binary",
+        "rounds": 269,
+        "model_path": "reports/behavioral_v5_E_extra_users_model.txt",
+        "score_path": "data/processed/behavioral_v5_E_extra_users_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_E_extra_users.csv",
+        "result_path": "reports/behavioral_v5_E_extra_users_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "roll13",
+          "history_end": "2020-03-30 00:00:00",
+          "label_end": "2020-04-13 00:00:00",
+          "users": 1760,
+          "candidate_pairs": 178007,
+          "positive_labels": 8447,
+          "extra_users": 500
+        },
+        {
+          "origin": "roll15",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-04-27 00:00:00",
+          "users": 1760,
+          "candidate_pairs": 182559,
+          "positive_labels": 7817,
+          "extra_users": 500
+        },
+        {
+          "origin": "roll17",
+          "history_end": "2020-04-27 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1760,
+          "candidate_pairs": 190653,
+          "positive_labels": 10822,
+          "extra_users": 500
+        }
+      ],
+      "rows": 551219,
+      "features": 61,
+      "rounds": 269,
+      "runtime_seconds": 26.277568996003538,
+      "peak_process_rss_mib": 848.69921875,
+      "native_params": {
+        "objective": "binary",
+        "num_leaves": 31,
+        "learning_rate": 0.03,
+        "min_data_in_leaf": 50,
+        "lambda_l2": 10.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "binary_logloss"
+      },
+      "top_feature_gains": [
+        {
+          "feature": "repeat_association_interaction",
+          "gain": 727672.0173196793,
+          "split": 139
+        },
+        {
+          "feature": "recency_weight_half28",
+          "gain": 269492.01843595505,
+          "split": 44
+        },
+        {
+          "feature": "expected_future_qualified_airings",
+          "gain": 128408.29004478455,
+          "split": 203
+        },
+        {
+          "feature": "mean_broadcast_minutes",
+          "gain": 81301.06677341461,
+          "split": 824
+        },
+        {
+          "feature": "association_best_confidence",
+          "gain": 45302.31614470482,
+          "split": 362
+        },
+        {
+          "feature": "future_airings",
+          "gain": 38691.496465206146,
+          "split": 370
+        },
+        {
+          "feature": "recency_weight_half14",
+          "gain": 27310.66355085373,
+          "split": 80
+        },
+        {
+          "feature": "days_since_ge30",
+          "gain": 18035.647435188293,
+          "split": 212
+        },
+        {
+          "feature": "user_qualified_minutes",
+          "gain": 17788.63545179367,
+          "split": 554
+        },
+        {
+          "feature": "association_sum_confidence",
+          "gain": 17292.52843093872,
+          "split": 273
+        },
+        {
+          "feature": "frequency_gt80_per_week",
+          "gain": 9804.472427368164,
+          "split": 89
+        },
+        {
+          "feature": "user_qualified_airings_ge30",
+          "gain": 9630.781303882599,
+          "split": 273
+        }
+      ]
+    },
+    {
+      "name": "F_combined",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5901011904761905,
+      "specification": {
+        "name": "F_combined",
+        "features": "both",
+        "fit_origins": [
+          "roll13",
+          "early"
+        ],
+        "target": "primary",
+        "templates_only": true,
+        "objective": "binary",
+        "rounds": 269,
+        "model_path": "reports/behavioral_v5_F_combined_model.txt",
+        "score_path": "data/processed/behavioral_v5_F_combined_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_F_combined.csv",
+        "result_path": "reports/behavioral_v5_F_combined_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "roll13",
+          "history_end": "2020-03-30 00:00:00",
+          "label_end": "2020-04-13 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 127417,
+          "positive_labels": 6528,
+          "extra_users": 0
+        },
+        {
+          "origin": "early",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 134359,
+          "positive_labels": 10790,
+          "extra_users": 0
+        }
+      ],
+      "rows": 261776,
+      "features": 102,
+      "rounds": 269,
+      "runtime_seconds": 21.80654883600073,
+      "peak_process_rss_mib": 662.1953125,
+      "native_params": {
+        "objective": "binary",
+        "num_leaves": 31,
+        "learning_rate": 0.03,
+        "min_data_in_leaf": 50,
+        "lambda_l2": 10.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "binary_logloss"
+      },
+      "top_feature_gains": [
+        {
+          "feature": "repeat_association_interaction",
+          "gain": 438711.30934357643,
+          "split": 106
+        },
+        {
+          "feature": "time_opportunity_weight",
+          "gain": 182084.87089061737,
+          "split": 391
+        },
+        {
+          "feature": "expected_future_qualified_airings",
+          "gain": 56359.63625955582,
+          "split": 116
+        },
+        {
+          "feature": "mean_broadcast_minutes",
+          "gain": 45774.0806927681,
+          "split": 529
+        },
+        {
+          "feature": "channel_decayed_weighted_airings",
+          "gain": 37847.051815509796,
+          "split": 101
+        },
+        {
+          "feature": "recency_weight_half14",
+          "gain": 13108.097522735596,
+          "split": 37
+        },
+        {
+          "feature": "channel_recent_weighted_airings",
+          "gain": 11944.906308174133,
+          "split": 101
+        },
+        {
+          "feature": "user_qualified_minutes",
+          "gain": 11012.9975233078,
+          "split": 293
+        },
+        {
+          "feature": "recency_weight_half28",
+          "gain": 10624.683271408081,
+          "split": 28
+        },
+        {
+          "feature": "association_best_confidence",
+          "gain": 9610.680718898773,
+          "split": 213
+        },
+        {
+          "feature": "frequency_gt80",
+          "gain": 8684.820385456085,
+          "split": 54
+        },
+        {
+          "feature": "channel_days_since_last_min",
+          "gain": 8249.538808345795,
+          "split": 230
+        }
+      ]
+    },
+    {
+      "name": "rank_enriched",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5901115520282187,
+      "specification": {
+        "name": "rank_enriched",
+        "features": "both",
+        "fit_origins": [
+          "early"
+        ],
+        "target": "primary",
+        "templates_only": true,
+        "objective": "lambdarank",
+        "rounds": 100,
+        "model_path": "reports/behavioral_v5_rank_enriched_model.txt",
+        "score_path": "data/processed/behavioral_v5_rank_enriched_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_rank_enriched.csv",
+        "result_path": "reports/behavioral_v5_rank_enriched_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "early",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 134359,
+          "positive_labels": 10790,
+          "extra_users": 0
+        }
+      ],
+      "rows": 134359,
+      "features": 102,
+      "rounds": 100,
+      "runtime_seconds": 5.9114417230011895,
+      "peak_process_rss_mib": 436.171875,
+      "native_params": {
+        "objective": "lambdarank",
+        "num_leaves": 15,
+        "learning_rate": 0.05,
+        "min_data_in_leaf": 30,
+        "lambda_l2": 5.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "ndcg",
+        "eval_at": [
+          5
+        ],
+        "label_gain": [
+          0,
+          1
+        ],
+        "lambdarank_truncation_level": 5,
+        "lambdarank_norm": true
+      },
+      "top_feature_gains": [
+        {
+          "feature": "repeat_association_interaction",
+          "gain": 51309.09094309807,
+          "split": 53
+        },
+        {
+          "feature": "repeat_preference_share",
+          "gain": 35002.62405753136,
+          "split": 62
+        },
+        {
+          "feature": "time_opportunity_weight",
+          "gain": 17004.889951705933,
+          "split": 112
+        },
+        {
+          "feature": "mean_broadcast_minutes",
+          "gain": 3382.489541530609,
+          "split": 133
+        },
+        {
+          "feature": "association_target_support",
+          "gain": 3218.01544547081,
+          "split": 24
+        },
+        {
+          "feature": "user_qualified_airings_ge30",
+          "gain": 1492.3838839530945,
+          "split": 37
+        },
+        {
+          "feature": "channel_decayed_weighted_airings",
+          "gain": 1100.7441837787628,
+          "split": 16
+        },
+        {
+          "feature": "repeat_rank",
+          "gain": 988.8102097511292,
+          "split": 40
+        },
+        {
+          "feature": "recency_weight_half28",
+          "gain": 719.9307861328125,
+          "split": 9
+        },
+        {
+          "feature": "channel_weighted_airings",
+          "gain": 705.1836602687836,
+          "split": 39
+        },
+        {
+          "feature": "qualified_minutes_gt50",
+          "gain": 472.9249098300934,
+          "split": 43
+        },
+        {
+          "feature": "expected_future_qualified_airings",
+          "gain": 471.894611120224,
+          "split": 33
+        }
+      ]
+    },
+    {
+      "name": "ablate_personal_history",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5668302469135802,
+      "specification": {
+        "name": "ablate_personal_history",
+        "features": "drop_personal_history:both",
+        "fit_origins": [
+          "early"
+        ],
+        "target": "primary",
+        "templates_only": true,
+        "objective": "binary",
+        "rounds": 269,
+        "model_path": "reports/behavioral_v5_ablate_personal_history_model.txt",
+        "score_path": "data/processed/behavioral_v5_ablate_personal_history_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_ablate_personal_history.csv",
+        "result_path": "reports/behavioral_v5_ablate_personal_history_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "early",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 134359,
+          "positive_labels": 10790,
+          "extra_users": 0
+        }
+      ],
+      "rows": 134359,
+      "features": 69,
+      "rounds": 269,
+      "runtime_seconds": 12.905068906999077,
+      "peak_process_rss_mib": 383.80859375,
+      "native_params": {
+        "objective": "binary",
+        "num_leaves": 31,
+        "learning_rate": 0.03,
+        "min_data_in_leaf": 50,
+        "lambda_l2": 10.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "binary_logloss"
+      },
+      "top_feature_gains": [
+        {
+          "feature": "time_opportunity_weight",
+          "gain": 338309.8854327202,
+          "split": 292
+        },
+        {
+          "feature": "mean_broadcast_minutes",
+          "gain": 27439.706557273865,
+          "split": 445
+        },
+        {
+          "feature": "channel_decayed_weighted_airings",
+          "gain": 23293.981063842773,
+          "split": 85
+        },
+        {
+          "feature": "association_best_confidence",
+          "gain": 20063.09872364998,
+          "split": 219
+        },
+        {
+          "feature": "user_recent_hour_shift",
+          "gain": 14028.70341348648,
+          "split": 537
+        },
+        {
+          "feature": "channel_days_since_last_min",
+          "gain": 9637.60620355606,
+          "split": 234
+        },
+        {
+          "feature": "user_long_session_fraction",
+          "gain": 7653.065735578537,
+          "split": 312
+        },
+        {
+          "feature": "time_channel_daypart_alignment",
+          "gain": 7309.382967233658,
+          "split": 348
+        },
+        {
+          "feature": "channel_recent_weighted_airings",
+          "gain": 7247.669476509094,
+          "split": 100
+        },
+        {
+          "feature": "user_channel_count",
+          "gain": 6514.774423599243,
+          "split": 313
+        },
+        {
+          "feature": "channel_distinct_days_max",
+          "gain": 6092.021619081497,
+          "split": 191
+        },
+        {
+          "feature": "user_session_std_minutes",
+          "gain": 5682.090262174606,
+          "split": 292
+        }
+      ]
+    },
+    {
+      "name": "ablate_association",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5883917548500882,
+      "specification": {
+        "name": "ablate_association",
+        "features": "drop_association:both",
+        "fit_origins": [
+          "early"
+        ],
+        "target": "primary",
+        "templates_only": true,
+        "objective": "binary",
+        "rounds": 269,
+        "model_path": "reports/behavioral_v5_ablate_association_model.txt",
+        "score_path": "data/processed/behavioral_v5_ablate_association_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_ablate_association.csv",
+        "result_path": "reports/behavioral_v5_ablate_association_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "early",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 134359,
+          "positive_labels": 10790,
+          "extra_users": 0
+        }
+      ],
+      "rows": 134359,
+      "features": 88,
+      "rounds": 269,
+      "runtime_seconds": 10.92472981299943,
+      "peak_process_rss_mib": 428.62109375,
+      "native_params": {
+        "objective": "binary",
+        "num_leaves": 31,
+        "learning_rate": 0.03,
+        "min_data_in_leaf": 50,
+        "lambda_l2": 10.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "binary_logloss"
+      },
+      "top_feature_gains": [
+        {
+          "feature": "time_opportunity_weight",
+          "gain": 226071.568015337,
+          "split": 275
+        },
+        {
+          "feature": "frequency_ge30",
+          "gain": 97575.95380020142,
+          "split": 21
+        },
+        {
+          "feature": "expected_future_qualified_airings",
+          "gain": 48351.30267548561,
+          "split": 156
+        },
+        {
+          "feature": "mean_broadcast_minutes",
+          "gain": 20920.646464586258,
+          "split": 441
+        },
+        {
+          "feature": "channel_decayed_weighted_airings",
+          "gain": 20525.020919322968,
+          "split": 123
+        },
+        {
+          "feature": "frequency_gt50",
+          "gain": 17031.859680891037,
+          "split": 15
+        },
+        {
+          "feature": "recency_weight_half14",
+          "gain": 13352.933413505554,
+          "split": 50
+        },
+        {
+          "feature": "user_recent_hour_shift",
+          "gain": 8075.189647674561,
+          "split": 434
+        },
+        {
+          "feature": "user_long_session_fraction",
+          "gain": 5868.51416015625,
+          "split": 276
+        },
+        {
+          "feature": "recency_weight_half28",
+          "gain": 5605.8657813072205,
+          "split": 21
+        },
+        {
+          "feature": "channel_days_since_last_min",
+          "gain": 5528.378366470337,
+          "split": 253
+        },
+        {
+          "feature": "popularity_support",
+          "gain": 4998.672575950623,
+          "split": 223
+        }
+      ]
+    },
+    {
+      "name": "ablate_future_schedule",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5855507054673721,
+      "specification": {
+        "name": "ablate_future_schedule",
+        "features": "drop_future_schedule:both",
+        "fit_origins": [
+          "early"
+        ],
+        "target": "primary",
+        "templates_only": true,
+        "objective": "binary",
+        "rounds": 269,
+        "model_path": "reports/behavioral_v5_ablate_future_schedule_model.txt",
+        "score_path": "data/processed/behavioral_v5_ablate_future_schedule_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_ablate_future_schedule.csv",
+        "result_path": "reports/behavioral_v5_ablate_future_schedule_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "early",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 134359,
+          "positive_labels": 10790,
+          "extra_users": 0
+        }
+      ],
+      "rows": 134359,
+      "features": 88,
+      "rounds": 269,
+      "runtime_seconds": 12.38087485300639,
+      "peak_process_rss_mib": 428.81640625,
+      "native_params": {
+        "objective": "binary",
+        "num_leaves": 31,
+        "learning_rate": 0.03,
+        "min_data_in_leaf": 50,
+        "lambda_l2": 10.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "binary_logloss"
+      },
+      "top_feature_gains": [
+        {
+          "feature": "time_opportunity_weight",
+          "gain": 165164.88008594513,
+          "split": 318
+        },
+        {
+          "feature": "repeat_association_interaction",
+          "gain": 159184.95057106018,
+          "split": 70
+        },
+        {
+          "feature": "frequency_ge30",
+          "gain": 41022.9523973465,
+          "split": 49
+        },
+        {
+          "feature": "channel_decayed_weighted_airings",
+          "gain": 28177.26869249344,
+          "split": 122
+        },
+        {
+          "feature": "recency_weight_half28",
+          "gain": 16219.58573436737,
+          "split": 53
+        },
+        {
+          "feature": "historical_airings",
+          "gain": 12241.109785079956,
+          "split": 459
+        },
+        {
+          "feature": "user_recent_hour_shift",
+          "gain": 7558.819350004196,
+          "split": 404
+        },
+        {
+          "feature": "days_since_ge30",
+          "gain": 7417.077427625656,
+          "split": 138
+        },
+        {
+          "feature": "recency_weight_half14",
+          "gain": 7290.8204164505005,
+          "split": 49
+        },
+        {
+          "feature": "days_since_gt80",
+          "gain": 6600.250060081482,
+          "split": 51
+        },
+        {
+          "feature": "channel_weighted_airings",
+          "gain": 6506.700329780579,
+          "split": 162
+        },
+        {
+          "feature": "association_max_pair_support",
+          "gain": 5736.718097686768,
+          "split": 229
+        }
+      ]
+    },
+    {
+      "name": "ablate_global_popularity",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5914764109347442,
+      "specification": {
+        "name": "ablate_global_popularity",
+        "features": "drop_global_popularity:both",
+        "fit_origins": [
+          "early"
+        ],
+        "target": "primary",
+        "templates_only": true,
+        "objective": "binary",
+        "rounds": 269,
+        "model_path": "reports/behavioral_v5_ablate_global_popularity_model.txt",
+        "score_path": "data/processed/behavioral_v5_ablate_global_popularity_scores.npy",
+        "prediction_path": "outputs/behavioral_v5_ablate_global_popularity.csv",
+        "result_path": "reports/behavioral_v5_ablate_global_popularity_fit.json"
+      },
+      "training_windows": [
+        {
+          "origin": "early",
+          "history_end": "2020-04-13 00:00:00",
+          "label_end": "2020-05-18 00:00:00",
+          "users": 1260,
+          "candidate_pairs": 134359,
+          "positive_labels": 10790,
+          "extra_users": 0
+        }
+      ],
+      "rows": 134359,
+      "features": 95,
+      "rounds": 269,
+      "runtime_seconds": 11.52731653900264,
+      "peak_process_rss_mib": 432.4453125,
+      "native_params": {
+        "objective": "binary",
+        "num_leaves": 31,
+        "learning_rate": 0.03,
+        "min_data_in_leaf": 50,
+        "lambda_l2": 10.0,
+        "num_threads": 2,
+        "deterministic": true,
+        "force_col_wise": true,
+        "seed": 42,
+        "feature_fraction_seed": 42,
+        "bagging_seed": 42,
+        "data_random_seed": 42,
+        "feature_fraction": 1.0,
+        "bagging_fraction": 1.0,
+        "max_bin": 63,
+        "verbosity": -1,
+        "metric": "binary_logloss"
+      },
+      "top_feature_gains": [
+        {
+          "feature": "time_opportunity_weight",
+          "gain": 177379.5219593048,
+          "split": 285
+        },
+        {
+          "feature": "repeat_association_interaction",
+          "gain": 146167.35343408585,
+          "split": 74
+        },
+        {
+          "feature": "expected_future_qualified_airings",
+          "gain": 42475.42109704018,
+          "split": 130
+        },
+        {
+          "feature": "frequency_ge30",
+          "gain": 28318.633193969727,
+          "split": 11
+        },
+        {
+          "feature": "mean_broadcast_minutes",
+          "gain": 22089.988209724426,
+          "split": 432
+        },
+        {
+          "feature": "channel_decayed_weighted_airings",
+          "gain": 16682.060190200806,
+          "split": 98
+        },
+        {
+          "feature": "recency_weight_half14",
+          "gain": 14320.781358718872,
+          "split": 55
+        },
+        {
+          "feature": "user_recent_hour_shift",
+          "gain": 7147.577931880951,
+          "split": 407
+        },
+        {
+          "feature": "channel_days_since_last_min",
+          "gain": 5545.232823848724,
+          "split": 247
+        },
+        {
+          "feature": "user_long_session_fraction",
+          "gain": 5459.432559728622,
+          "split": 239
+        },
+        {
+          "feature": "user_qualified_minutes",
+          "gain": 5217.784303188324,
+          "split": 245
+        },
+        {
+          "feature": "days_since_gt80",
+          "gain": 4684.860023736954,
+          "split": 63
+        }
+      ]
+    },
+    {
+      "name": "rrf_50_50",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5934080687830687
+    },
+    {
+      "name": "rrf_30_70",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.592563492063492
+    },
+    {
+      "name": "normalized_50_50",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.5927440476190475
+    },
+    {
+      "name": "four_way_rrf",
+      "status": "complete",
+      "strict_map_at_5_all_1260": 0.594623897707231
+    }
+  ],
+  "earlier_diagnostic": {
+    "earlier_base": 0.46850749559082894,
+    "earlier_best_features": 0.4806177248677249
+  },
+  "earlier_feature_gain": 0.012110229276895979,
+  "candidate_pilots": {
+    "early": {
+      "baseline": {
+        "recall": 0.5389879614366352,
+        "recalled_relevant": 10790,
+        "missed_relevant": 9229,
+        "oracle_map_at_5": 0.874920634920635
+      },
+      "sources": {
+        "channel": {
+          "source_only": {
+            "recall": 0.2467156201608472,
+            "recalled_relevant": 4939,
+            "missed_relevant": 15080,
+            "oracle_map_at_5": 0.6533862433862434
+          },
+          "union_with_v4": {
+            "recall": 0.5646635696088715,
+            "recalled_relevant": 11304,
+            "missed_relevant": 8715,
+            "oracle_map_at_5": 0.8834126984126983
+          },
+          "new_relevant_pairs": 514
+        },
+        "channel_time": {
+          "source_only": {
+            "recall": 0.3120035965832459,
+            "recalled_relevant": 6246,
+            "missed_relevant": 13773,
+            "oracle_map_at_5": 0.7357010582010582
+          },
+          "union_with_v4": {
+            "recall": 0.5675108646785554,
+            "recalled_relevant": 11361,
+            "missed_relevant": 8658,
+            "oracle_map_at_5": 0.885595238095238
+          },
+          "new_relevant_pairs": 571
+        },
+        "collaborative": {
+          "source_only": {
+            "recall": 0.30431090464059146,
+            "recalled_relevant": 6092,
+            "missed_relevant": 13927,
+            "oracle_map_at_5": 0.7555291005291006
+          },
+          "union_with_v4": {
+            "recall": 0.5389879614366352,
+            "recalled_relevant": 10790,
+            "missed_relevant": 9229,
+            "oracle_map_at_5": 0.874920634920635
+          },
+          "new_relevant_pairs": 0
+        }
+      },
+      "runtime_seconds": 20.18708524700196,
+      "collaborative_shape": [
+        4721,
+        1613
+      ],
+      "collaborative_nnz": 136503,
+      "memory_budget": {
+        "block_rows": 128,
+        "estimated_block_and_neighbors_bytes": 8000480,
+        "preallocation_limit_bytes": 268435456,
+        "retained_neighbor_nnz": 152976
+      },
+      "cf_method": "uncapped log-count/IDF, user normalization, item cosine, pair-support shrinkage 20, top100 neighbors; top20 proposals",
+      "gold_items_injected": false,
+      "peak_process_rss_bytes": 537026560,
+      "peak_process_rss_mib": 512.1484375,
+      "method": "resource.getrusage(RUSAGE_SELF).ru_maxrss; bytes on macOS, KiB on Linux"
+    },
+    "primary": {
+      "baseline": {
+        "recall": 0.38705376235880146,
+        "recalled_relevant": 15385,
+        "missed_relevant": 24364,
+        "oracle_map_at_5": 0.8969708994708995
+      },
+      "sources": {
+        "channel": {
+          "source_only": {
+            "recall": 0.14863267000427682,
+            "recalled_relevant": 5908,
+            "missed_relevant": 33841,
+            "oracle_map_at_5": 0.6736772486772487
+          },
+          "union_with_v4": {
+            "recall": 0.40134343002339684,
+            "recalled_relevant": 15953,
+            "missed_relevant": 23796,
+            "oracle_map_at_5": 0.9027380952380952
+          },
+          "new_relevant_pairs": 568
+        },
+        "channel_time": {
+          "source_only": {
+            "recall": 0.17379053561095878,
+            "recalled_relevant": 6908,
+            "missed_relevant": 32841,
+            "oracle_map_at_5": 0.7309126984126985
+          },
+          "union_with_v4": {
+            "recall": 0.40126795642657676,
+            "recalled_relevant": 15950,
+            "missed_relevant": 23799,
+            "oracle_map_at_5": 0.9028042328042328
+          },
+          "new_relevant_pairs": 565
+        },
+        "collaborative": {
+          "source_only": {
+            "recall": 0.17894789806032857,
+            "recalled_relevant": 7113,
+            "missed_relevant": 32636,
+            "oracle_map_at_5": 0.7668386243386244
+          },
+          "union_with_v4": {
+            "recall": 0.38705376235880146,
+            "recalled_relevant": 15385,
+            "missed_relevant": 24364,
+            "oracle_map_at_5": 0.8969708994708995
+          },
+          "new_relevant_pairs": 0
+        }
+      },
+      "runtime_seconds": 28.614355130004697,
+      "collaborative_shape": [
+        4813,
+        2769
+      ],
+      "collaborative_nnz": 265719,
+      "memory_budget": {
+        "block_rows": 128,
+        "estimated_block_and_neighbors_bytes": 13734240,
+        "preallocation_limit_bytes": 268435456,
+        "retained_neighbor_nnz": 274067
+      },
+      "cf_method": "uncapped log-count/IDF, user normalization, item cosine, pair-support shrinkage 20, top100 neighbors; top20 proposals",
+      "gold_items_injected": false,
+      "peak_process_rss_bytes": 537026560,
+      "peak_process_rss_mib": 512.1484375,
+      "method": "resource.getrusage(RUSAGE_SELF).ru_maxrss; bytes on macOS, KiB on Linux"
+    },
+    "enhanced_reranker_status": "candidate-only pilot; no recall gain is claimed as a trained reranker gain; wider-pool reranking deferred to protect deliverable buffer"
+  },
+  "execution": {
+    "python_version": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "lightgbm": "4.6.0",
+    "seed": 42,
+    "threads": 2,
+    "runtime_seconds_before_report_write": 473.79231513800187,
+    "peak_process_rss_bytes": 537026560,
+    "peak_process_rss_mib": 512.1484375,
+    "method": "resource.getrusage(RUSAGE_SELF).ru_maxrss; bytes on macOS, KiB on Linux",
+    "source_sha256": {
+      "src/behavioral_v5.py": "146a6f8b774300978e5f4949f3e482cc22f980e2e6cfec0f1883b47ad3691262",
+      "src/behavioral_evidence_v5.py": "78385984aacd07c705aa475778efb7307a5e254d8466f9b1221707dcbcdc5edd",
+      "tests/test_behavioral_v5.py": "8271661bccdfc99dca5704f5d8f0519b9542735a58a93cf4925c325ac17a0ad6"
+    },
+    "optimization_freeze_utc": "2026-10-24T13:00:00+00:00"
+  },
+  "feature_generation": {
+    "bundles": {
+      "early": {
+        "rows": 134359,
+        "queries": 1260,
+        "history_end": "2020-04-13 00:00:00",
+        "label_end": "2020-05-18 00:00:00"
+      },
+      "primary": {
+        "rows": 158956,
+        "queries": 1260,
+        "history_end": "2020-05-18 00:00:00",
+        "label_end": "2020-07-27 00:00:00"
+      },
+      "final": {
+        "rows": 182323,
+        "queries": 1260,
+        "history_end": "2020-07-27 00:00:00",
+        "label_end": null
+      },
+      "roll13": {
+        "rows": 178007,
+        "queries": 1760,
+        "history_end": "2020-03-30 00:00:00",
+        "label_end": "2020-04-13 00:00:00"
+      },
+      "roll15": {
+        "rows": 182559,
+        "queries": 1760,
+        "history_end": "2020-04-13 00:00:00",
+        "label_end": "2020-04-27 00:00:00"
+      },
+      "roll17": {
+        "rows": 190653,
+        "queries": 1760,
+        "history_end": "2020-04-27 00:00:00",
+        "label_end": "2020-05-18 00:00:00"
+      }
+    },
+    "extra_user_selection": "500 deterministic hashed non-template users with >=5 distinct broad programmes before 2020-03-30",
+    "runtime_seconds": 460.75597758400545,
+    "peak_process_rss_bytes": 523018240,
+    "peak_process_rss_mib": 498.7890625,
+    "method": "resource.getrusage(RUSAGE_SELF).ru_maxrss; bytes on macOS, KiB on Linux",
+    "channel_key_normalized_bundles": {
+      "early": "data/processed/behavioral_v5_early_normalized_channels_meta.json",
+      "primary": "data/processed/behavioral_v5_primary_normalized_channels_meta.json",
+      "final": "data/processed/behavioral_v5_final_normalized_channels_meta.json",
+      "roll13": "data/processed/behavioral_v5_roll13_normalized_channels_meta.json",
+      "roll15": "data/processed/behavioral_v5_roll15_normalized_channels_meta.json",
+      "roll17": "data/processed/behavioral_v5_roll17_normalized_channels_meta.json"
+    }
+  },
+  "evidence_stage_measurements": {
+    "raw": {
+      "source_rows": 5821987,
+      "duplicates_removed": 17,
+      "deduplicated_views": 5821970,
+      "boundary_airings": 95,
+      "runtime_seconds": 159.10448274100054,
+      "peak_process_rss_bytes": 45387776,
+      "peak_process_rss_mib": 43.28515625,
+      "method": "resource.getrusage(RUSAGE_SELF).ru_maxrss; bytes on macOS, KiB on Linux"
+    },
+    "context": {
+      "runtime_seconds": 85.46228376599902,
+      "origins": {
+        "prefix13": {
+          "users": 4809,
+          "seconds": 1505272315.0
+        },
+        "early": {
+          "users": 4841,
+          "seconds": 2477632239.0
+        },
+        "prefix17": {
+          "users": 4867,
+          "seconds": 3422535643.0
+        },
+        "primary": {
+          "users": 4876,
+          "seconds": 4848163624.0
+        },
+        "final": {
+          "users": 4914,
+          "seconds": 8503411121.0
+        }
+      },
+      "peak_process_rss_bytes": 45387776,
+      "peak_process_rss_mib": 43.28515625,
+      "method": "resource.getrusage(RUSAGE_SELF).ru_maxrss; bytes on macOS, KiB on Linux"
+    },
+    "profile": {
+      "windows": {
+        "prefix13": {
+          "rows": 290200,
+          "start": "2020-03-09 00:00:00",
+          "end_exclusive": "2020-03-30 00:00:00"
+        },
+        "prefix17": {
+          "rows": 604206,
+          "start": "2020-03-09 00:00:00",
+          "end_exclusive": "2020-04-27 00:00:00"
+        },
+        "labels14_15": {
+          "rows": 223453,
+          "start": "2020-03-30 00:00:00",
+          "end_exclusive": "2020-04-13 00:00:00"
+        },
+        "labels16_17": {
+          "rows": 228524,
+          "start": "2020-04-13 00:00:00",
+          "end_exclusive": "2020-04-27 00:00:00"
+        },
+        "labels18_20": {
+          "rows": 337210,
+          "start": "2020-04-27 00:00:00",
+          "end_exclusive": "2020-05-18 00:00:00"
+        }
+      },
+      "runtime_seconds": 31.137530899999547
+    }
+  },
+  "final_csv_validation": {
+    "columns": [
+      "user_id",
+      "tv_show_id"
+    ],
+    "data_rows": 1260,
+    "unique_user_ids": 1260,
+    "exact_template_user_ids_and_row_order": true,
+    "user_ids_preserved_as_strings": true,
+    "all_rows_have_exactly_five_unique_positive_ids": true,
+    "canonical_space_separated_ids_verified": true,
+    "allowed_candidate_pool_size": 6632,
+    "all_predictions_in_allowed_candidate_pool": true,
+    "unavailable_predicted_programmes": [],
+    "distinct_recommended_programmes": 122,
+    "prediction_slots": 6300
+  },
+  "historical_deterministic_replay_verified": true,
+  "publication_scope": "Aggregate measured results only; no raw data, full user-level experiment logs, or AI-session exports."
+}

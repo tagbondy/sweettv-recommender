@@ -1,0 +1,4 @@
+# Preserve the manually scored CSV's original CRLF bytes on every platform.
+outputs/submission_v5.csv -text whitespace=cr-at-eol
+*.png binary
+*.pdf binary

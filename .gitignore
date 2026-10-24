@@ -1,0 +1,68 @@
+# Local environments, caches, editors, and operating-system artifacts.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*.log
+
+# Competition data and large derived evidence stay local, including the template.
+/data/
+*.sqlite*
+*.npy
+*.npz
+
+# Original AI exports and transcript logs are course deliverables, never Git assets.
+/docs/ai-session/
+/session-*.md
+/session-*.json
+/opencode*.json
+/docs/assignment/
+/docs/methodology/
+
+# Credentials and local configuration; do not override these with broad allow rules.
+.env
+.env.*
+.opencode/
+.config/
+secrets/
+credentials*
+*credentials*.json
+*token*.json
+kaggle.json
+auth.json
+*.key
+*.pem
+*.p12
+*.pfx
+.netrc
+
+# Publish only the designated final CSV, not intermediate per-user predictions.
+/outputs/*
+!/outputs/submission_v5.csv
+
+# Publish a small, explicit evidence set. Archived full experiments remain local.
+/reports/*
+!/reports/evidence/
+/reports/evidence/*
+!/reports/evidence/kaggle_v5_scores.png
+!/reports/evidence/kaggle_all_scores.png
+!/reports/academic_report_v5_final.pdf
+!/reports/academic_report_v5_final_examples.json
+!/reports/kaggle_verified_history.json
+!/reports/final_v5_summary.json
+!/reports/final_v5_summary.md
+!/reports/final_delivery_requirements.md
